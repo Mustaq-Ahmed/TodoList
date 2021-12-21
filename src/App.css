@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(to right, rgb(74, 119, 74), rgb(41, 41, 80));
+  color: white;
+  min-height: 100vh;
+}
+header {
+  font-size: 2rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-input,.form-btn{
+ font-size: 2rem;
+ padding: 0.5rem;
+ font-weight: bold;
+ border: none;
+ outline: none;
+}
+
+.form-btn{
+  color: blue;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-btn:hover{
+  background: blue;
+  color: white
+}
+
+.filter-todo{
+  margin-left: 2rem;
+  padding: 1rem;
+  width: 10rem;
+  color: blue;
+  cursor: pointer;
+}
+.filter-todo:focus{
+  outline: none;
+}
+
+.todo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list{
+  list-style: none;
+  min-width: 40%;
+}
+
+.todo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.complete-btn,
+.trash-btn{
+  padding: 1rem;
+  border: none;
+  color: yellowgreen;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.complete-btn{
+  background-color: blue;
+}
+.trash-btn{
+  background-color: rgb(131, 62, 62);
+}
+
+.todo-item{
+  padding: 0rem 1rem;
+}
+.completed{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: blue;
+  cursor: pointer;
+  width: 12rem;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: blue;
+  cursor: pointer;
+  pointer-events: none;
+}
